@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaikki Yhdessä Yritys</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SPRÅKVAL -->
+  <div class="language-switch">
+    <a href="?lang=fi">FI</a> | 
+    <a href="?lang=sv">SV</a> | 
+    <a href="?lang=en">EN</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Kaikki Yhdessä Yritys">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#hero">Etusivu</a></li>
+        <li><a href="#services">Palvelut</a></li>
+        <li><a href="#offers">Tarjoukset</a></li>
+        <li><a href="#pricing">Hinnat</a></li>
+        <li><a href="#contact">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Me Hoidamme Vaikeat Työt!</h1>
+      <p>Remontti, muutto, siivous, saneeraus, pihatyöt – teemme sen helpoksi sinulle.</p>
+      <a href="#contact" class="btn">Ota yhteyttä</a>
+    </div>
+  </section>
+
+  <!-- PALVELUT -->
+  <section id="services" class="services">
+    <h2>Palvelut</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/icons/remontti.png" alt="Remontti">
+        <h3>Remontti</h3>
+        <p>Keittiöt, kylpyhuoneet, huoneet – isot ja pienet projektit.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/icons/muutto.png" alt="Muutto">
+        <h3>Muutto & Siivous</h3>
+        <p>Muuttoapu ja siivous ennen ja jälkeen muuton.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/icons/siivous.png" alt="Siivous">
+        <h3>Saneeraus & Siivous</h3>
+        <p>Perusteellinen siivous ja hygieniavaativat tehtävät.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/icons/piha.png" alt="Piha">
+        <h3>Piha & Puita</h3>
+        <p>Puiden kaato, pensasleikkaus ja pihan ylläpito.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/icons/asennus.png" alt="Asennus">
+        <h3>Asennus</h3>
+        <p>Kodinkoneiden asennus, huonekalujen kokoaminen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARJOUKSET -->
+  <section id="offers" class="offers">
+    <h2>Tarjoukset</h2>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <img src="images/offers/offer1.jpg" alt="Tarjous 1">
+        <h3>20% muuttopalveluista maaliskuussa</h3>
+      </div>
+      <div class="offer-card">
+        <img src="images/offers/offer2.jpg" alt="Tarjous 2">
+        <h3>Ilmainen kotikäynti</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- HINNAT -->
+  <section id="pricing" class="pricing">
+    <h2>Hinnat</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Muuttopalvelu</h3>
+        <p>Alkaen 500 €/tunti</p>
+      </div>
+      <div class="price-card">
+        <h3>Siivous</h3>
+        <p>Alkaen 250 €/tunti</p>
+      </div>
+      <div class="price-card">
+        <h3>Pihatyöt & Puiden kaato</h3>
+        <p>Alkaen 350 €/tunti</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YHTEYSTIEDOT -->
+  <section id="contact" class="contact">
+    <h2>Yhteystiedot</h2>
+    <div class="contact-container">
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Nimi" required>
+        <input type="email" name="email" placeholder="Sähköposti" required>
+        <textarea name="message" placeholder="Viesti" required></textarea>
+        <button type="submit">Lähetä</button>
+      </form>
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!..." 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Kaikki Yhdessä Yritys</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- JS: mobilmeny -->
+  <script src="scripts/menu.js"></script>
+
+</body>
+</html>
