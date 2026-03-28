@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
     <div class="header-container">
@@ -18,6 +19,7 @@
         <ul>
           <li><a href="#tjanster">Tjänster</a></li>
           <li><a href="#erbjudanden">Erbjudanden</a></li>
+          <li><a href="#kartta">Kartta</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -33,26 +35,73 @@
     </div>
   </section>
 
-  <!-- Google Maps -->
+  <!-- TJÄNSTER -->
+  <section id="tjanster">
+    <h2>Våra Tjänster</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h3>Renovering</h3>
+        <p>Allt från små reparationer till större projekt.</p>
+      </div>
+      <div class="service-item">
+        <h3>Flytt & Städ</h3>
+        <p>Snabb och professionell flyttservice med städning.</p>
+      </div>
+      <div class="service-item">
+        <h3>Sanering & Markarbete</h3>
+        <p>Trädgård, fällning, markskötsel och sanering.</p>
+      </div>
+      <div class="service-item">
+        <h3>Installationer</h3>
+        <p>Montering av vitvaror, möbler och mindre installationer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERBJUDANDEN -->
+  <section id="erbjudanden">
+    <h2>Erbjudanden</h2>
+    <ul>
+      <li>10% rabatt på flyttjänster under mars</li>
+      <li>Gratis offert för renovering av kök</li>
+      <li>Fällning av träd med 15% rabatt vid bokning innan maj</li>
+    </ul>
+  </section>
+
+  <!-- GOOGLE MAPS -->
   <section id="kartta">
     <h2>Vår plats</h2>
     <div id="map"></div>
   </section>
 
-  <!-- Kontaktformulär -->
+  <!-- KONTAKT -->
   <section id="kontakt">
-  <h2>Kontakt</h2>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Ditt namn" required>
-    <input type="email" name="email" placeholder="Din e-post" required>
-    <textarea name="message" placeholder="Meddelande" required></textarea>
-    <button type="submit">Skicka</button>
-  </form>
-  <div class="form-status" id="form-status"></div>
+    <h2>Kontakt</h2>
+    <div class="contact-wrapper">
+      <!-- Formulär -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Ditt namn" required>
+        <input type="email" name="email" placeholder="Din e-post" required>
+        <textarea name="message" placeholder="Meddelande" required></textarea>
+        <button type="submit">Skicka</button>
+        <div class="form-status" id="form-status"></div>
+      </form>
+
+      <!-- Kontaktuppgifter -->
+      <div class="contact-info">
+        <h3>Våra kontaktuppgifter</h3>
+        <p><strong>Telefon:</strong> +358 40 123 4567</p>
+        <p><strong>E-post:</strong> info@alltiallo.fi</p>
+        <p><strong>Adress:</strong> Exempelgatan 1, 00100 Helsingfors</p>
+      </div>
+    </div>
   </section>
 
+  <!-- SCRIPTS -->
   <script src="scripts/meny.js"></script>
+  <script src="scripts/form.js"></script>
   <script async src="https://maps.googleapis.com/maps/api/js?key=DIN_API_NYCKEL&callback=initMap"></script>
   <script src="scripts/map.js"></script>
+
 </body>
 </html>
