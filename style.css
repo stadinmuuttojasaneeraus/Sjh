@@ -3,11 +3,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-.form-status {
-  margin-top: 10px;
-  font-weight: bold;
-  color: green;
-}
+
+/* HEADER */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -17,13 +14,11 @@ body {
   color: #fff;
 }
 
-/* Logga */
 .logo img {
-  max-height: 100px;
+  max-height: 80px;
   width: auto;
 }
 
-/* Meny */
 .main-menu ul {
   list-style: none;
   display: flex;
@@ -38,13 +33,13 @@ body {
   font-weight: bold;
 }
 
-/* Hamburger knapp */
 .menu-toggle {
   display: none;
   font-size: 30px;
   background: none;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -70,21 +65,52 @@ body {
   align-items: center;
   background: rgba(0,0,0,0.4);
   color: #fff;
+  text-align: center;
 }
 
-/* Google Maps */
+/* TJÄNSTER */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ERBJUDANDEN */
+#erbjudanden ul {
+  padding-left: 20px;
+}
+
+/* GOOGLE MAPS */
 #map {
   width: 100%;
   height: 400px;
 }
 
-/* Kontaktformulär */
+/* KONTAKT */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+form, .contact-info {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 500px;
-  margin: auto;
 }
 
 input, textarea {
@@ -102,12 +128,28 @@ button {
   cursor: pointer;
 }
 
-/* Mobilanpassning */
+.contact-info h3 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+/* MOBILANPASSNING */
 @media (max-width: 768px) {
   .main-menu {
     display: none;
     flex-direction: column;
     background-color: #0077cc;
+    width: 100%;
   }
 
   .main-menu.active {
@@ -118,11 +160,11 @@ button {
     display: block;
   }
 
-  .header-container {
-    flex-wrap: wrap;
-  }
-
   .hero img {
     height: 250px;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
   }
 }
