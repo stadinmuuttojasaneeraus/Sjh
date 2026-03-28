@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alltiallo Företag</title>
+  <title>Alltiallo Yritys</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,87 +12,98 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images/logo.png" alt="Alltiallo Företag">
+        <img src="images/logo.png" alt="Alltiallo Yritys">
       </div>
+
+      <!-- Hamburgerknapp -->
       <button class="menu-toggle">☰</button>
+
+      <!-- Huvudmeny -->
       <nav class="main-menu">
         <ul>
-          <li><a href="#tjanster">Tjänster</a></li>
-          <li><a href="#erbjudanden">Erbjudanden</a></li>
-          <li><a href="#kartta">Kartta</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#tjanster">Palvelut</a></li>
+          <li><a href="#erbjudanden">Tarjoukset</a></li>
+          <li><a href="#kartta">Sijainti</a></li>
+          <li><a href="#kontakt">Yhteystiedot</a></li>
         </ul>
       </nav>
+
+      <!-- Språkval -->
+      <div class="language-switcher">
+        <a href="?lang=fi"><img src="images/fi.png" alt="FI"></a>
+        <a href="?lang=sv"><img src="images/sv.png" alt="SV"></a>
+        <a href="?lang=en"><img src="images/en.png" alt="EN"></a>
+      </div>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="images/hero.jpg" alt="Företaget i arbete">
+    <img src="images/hero.jpg" alt="Yritys työssään">
     <div class="hero-overlay">
-      <h1>Alltiallo Företag</h1>
-      <p>Renovering, Flytt, Städ, Sanering, Pihatyöt, Installation</p>
+      <h1>Alltiallo Yritys</h1>
+      <p>Remontti, Muutto, Siivous, Puhdistus, Piha- ja asennustyöt</p>
     </div>
   </section>
 
   <!-- TJÄNSTER -->
   <section id="tjanster">
-    <h2>Våra Tjänster</h2>
+    <h2>Palvelut</h2>
     <div class="service-grid">
       <div class="service-item">
-        <h3>Renovering</h3>
-        <p>Allt från små reparationer till större projekt.</p>
+        <h3>Remontti</h3>
+        <p>Pienistä korjauksista suuriin projekteihin.</p>
       </div>
       <div class="service-item">
-        <h3>Flytt & Städ</h3>
-        <p>Snabb och professionell flyttservice med städning.</p>
+        <h3>Muutto & Siivous</h3>
+        <p>Nopea ja ammattimainen muuttopalvelu siivouksella.</p>
       </div>
       <div class="service-item">
-        <h3>Sanering & Markarbete</h3>
-        <p>Trädgård, fällning, markskötsel och sanering.</p>
+        <h3>Puhdistus & Pihatyöt</h3>
+        <p>Puutarha, puiden kaato, pihan hoito ja puhdistus.</p>
       </div>
       <div class="service-item">
-        <h3>Installationer</h3>
-        <p>Montering av vitvaror, möbler och mindre installationer.</p>
+        <h3>Asennukset</h3>
+        <p>Kodinkoneiden, huonekalujen ja pienten asennusten tekeminen.</p>
       </div>
     </div>
   </section>
 
   <!-- ERBJUDANDEN -->
   <section id="erbjudanden">
-    <h2>Erbjudanden</h2>
+    <h2>Tarjoukset</h2>
     <ul>
-      <li>10% rabatt på flyttjänster under mars</li>
-      <li>Gratis offert för renovering av kök</li>
-      <li>Fällning av träd med 15% rabatt vid bokning innan maj</li>
+      <li>10% alennus muuttopalveluista maaliskuussa</li>
+      <li>Ilmainen tarjous keittiöremontista</li>
+      <li>Puiden kaato 15% alennuksella varauksesta ennen toukokuuta</li>
     </ul>
   </section>
 
   <!-- GOOGLE MAPS -->
   <section id="kartta">
-    <h2>Vår plats</h2>
+    <h2>Sijainti</h2>
     <div id="map"></div>
   </section>
 
   <!-- KONTAKT -->
   <section id="kontakt">
-    <h2>Kontakt</h2>
+    <h2>Yhteystiedot</h2>
     <div class="contact-wrapper">
       <!-- Formulär -->
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Ditt namn" required>
-        <input type="email" name="email" placeholder="Din e-post" required>
-        <textarea name="message" placeholder="Meddelande" required></textarea>
-        <button type="submit">Skicka</button>
+        <input type="text" name="name" placeholder="Nimesi" required>
+        <input type="email" name="email" placeholder="Sähköposti" required>
+        <textarea name="message" placeholder="Viesti" required></textarea>
+        <button type="submit">Lähetä</button>
         <div class="form-status" id="form-status"></div>
       </form>
 
       <!-- Kontaktuppgifter -->
       <div class="contact-info">
-        <h3>Våra kontaktuppgifter</h3>
-        <p><strong>Telefon:</strong> +358 40 123 4567</p>
-        <p><strong>E-post:</strong> info@alltiallo.fi</p>
-        <p><strong>Adress:</strong> Exempelgatan 1, 00100 Helsingfors</p>
+        <h3>Ota yhteyttä</h3>
+        <p><strong>Puhelin:</strong> +358 40 123 4567</p>
+        <p><strong>Sähköposti:</strong> info@alltiallo.fi</p>
+        <p><strong>Osoite:</strong> Esimerkkikatu 1, 00100 Helsinki</p>
       </div>
     </div>
   </section>
