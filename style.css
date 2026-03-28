@@ -12,6 +12,7 @@ body {
   padding: 10px 20px;
   background-color: #0077cc;
   color: #fff;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -20,9 +21,9 @@ body {
 }
 
 .main-menu ul {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -33,6 +34,19 @@ body {
   font-weight: bold;
 }
 
+/* Språkval */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.language-switcher img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Hamburgerknapp */
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -148,8 +162,9 @@ button {
   .main-menu {
     display: none;
     flex-direction: column;
-    background-color: #0077cc;
     width: 100%;
+    background-color: #0077cc;
+    margin-top: 10px;
   }
 
   .main-menu.active {
@@ -162,9 +177,5 @@ button {
 
   .hero img {
     height: 250px;
-  }
-
-  .header-container {
-    flex-wrap: wrap;
   }
 }
