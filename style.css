@@ -124,9 +124,15 @@ body {
 }
 
 /* GOOGLE MAPS */
-#map {
+.map-container {
   width: 100%;
   height: 400px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* KONTAKT */
