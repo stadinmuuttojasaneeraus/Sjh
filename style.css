@@ -4,7 +4,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:Arial,sans-serif; line-height:1.6; background:#f5f5f5; color:#333; }
 
-/* HEADER STILAR */
+/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -23,19 +23,12 @@ header {
   font-weight: bold;
 }
 
-/* SPRÅKVAL */
-.language-select a {
-  color: white;
-  margin: 0 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 /* NAV MENY */
 .nav-menu ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-menu a {
@@ -43,14 +36,18 @@ header {
   text-decoration: none;
 }
 
-/* HAMBURGER - döljs på desktop */
-.hamburger {
+.language a {
+  font-weight: bold;
+}
+
+/* MENU ICON (hamburger) */
+.menu-icon {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
-.hamburger span {
+.menu-icon span {
   width: 25px;
   height: 3px;
   background: white;
@@ -121,31 +118,31 @@ h2 { font-size:2rem; margin-bottom:20px; color:#004080; }
 @media (max-width: 768px) {
 
   /* Hamburger visas */
-  .hamburger {
+  .menu-icon {
     display: flex;
   }
 
-  /* Menyn döljs tills hamburgaren klickas */
-  .nav-menu ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
+  /* Menyn döljs tills öppnas */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* utanför skärmen */
+    width: 250px;
+    height: 100%;
     background: #004080;
-    width: 200px;
-    padding: 10px;
-    border-radius: 0 0 0 10px;
+    transition: right 0.3s ease;
+    z-index: 2000;
   }
 
-  /* När JS lägger till "active" visas menyn */
-  .nav-menu ul.active {
-    display: flex;
+  .nav-menu.open {
+    right: 0;
   }
-}
-  #hero img { height:250px; }
-  .hero-text h1 { font-size:1.5rem; }
-  .hero-text p { font-size:1rem; }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 20px;
+  }
 }
 @media (max-width:768px) {
   /* Contact container mobilanpassning */
