@@ -1,16 +1,10 @@
-const menuIcon = document.getElementById("menu-icon");
-const navMenu = document.getElementById("nav-menu");
-const accordionBtns = document.querySelectorAll(".accordion-btn");
-
-// Öppna/stäng mobilmenyn
-menuIcon.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
-
-// Accordion funktion för undermenyer på mobil
-accordionBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const submenu = btn.nextElementSibling;
-    submenu.classList.toggle("open");
+// Smooth scroll för genvägar
+document.querySelectorAll('.text-menu a, .contact-btn').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
