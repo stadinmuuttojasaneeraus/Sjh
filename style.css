@@ -8,20 +8,56 @@ body { font-family:Arial,sans-serif; line-height:1.6; background:#f5f5f5; color:
    HEADER
 ======================== */
 header {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 20px; background:#004080; color:#fff;
-  position:sticky; top:0; z-index:1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #004080;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-header .logo img { height:60px; width:auto; }
 
-/* NAVIGATION */
-.nav-menu ul { list-style:none; display:flex; gap:20px; }
-.nav-menu ul li a { text-decoration:none; color:#fff; font-weight:500; }
-.language-select a { color:#fff; text-decoration:none; margin-left:10px; font-weight:500; }
+/* LOGO */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* SPRÅK */
+.language-select a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* NAV */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
 
 /* HAMBURGER */
-.hamburger { display:none; flex-direction:column; gap:4px; cursor:pointer; }
-.hamburger span { width:25px; height:3px; background:#fff; display:block; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+}
 
 /* HERO */
 #hero { position:relative; text-align:center; color:#fff; }
@@ -41,24 +77,76 @@ h2 { font-size:2rem; margin-bottom:20px; color:#004080; }
 .offers-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px; }
 .offer-item { background:#e0f0ff; padding:20px; border-radius:10px; text-align:center; }
 
-/* CONTACT */
-.contact-container { display:flex; flex-wrap:wrap; gap:30px; }
-.contact-info, .contact-form { flex:1 1 300px; background:#fff; padding:20px; border-radius:10px; }
-.contact-form input, .contact-form textarea, .contact-form button { width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
-.contact-form button { background:#004080; color:#fff; border:none; cursor:pointer; }
-.contact-form .form-status { margin-top:10px; font-weight:bold; }
+/* CONTACT CONTAINER */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #004080;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form .form-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
 
 /* GOOGLE MAPS */
 .map-container { width:100%; height:400px; margin-top:20px; }
 .map-container iframe { width:100%; height:100%; border:none; border-radius:10px; }
 
 /* RESPONSIVE */
-@media(max-width:768px){
-  .nav-menu ul { display:none; flex-direction:column; background:#004080; position:absolute; top:60px; right:0; width:200px; padding:10px; border-radius:0 0 0 10px; }
-  .nav-menu ul.active { display:flex; }
-  .hamburger { display:flex; }
+@media (max-width: 768px) {
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #004080;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-menu ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
   #hero img { height:250px; }
   .hero-text h1 { font-size:1.5rem; }
   .hero-text p { font-size:1rem; }
   .contact-container { flex-direction:column; }
+}
+@media (max-width:768px) {
+  /* Contact container mobilanpassning */
+  .contact-container { flex-direction: column; }
+  .contact-form input, .contact-form textarea, .contact-form button { font-size: 0.95rem; }
 }
