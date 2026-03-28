@@ -85,7 +85,7 @@ body {
 /* TJÄNSTER */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -95,6 +95,11 @@ body {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  transition: 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
 }
 
 .service-item img {
