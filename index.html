@@ -3,100 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alltiallo Yritys</title>
+  <title>Alltiallo Oy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="images/logo.png" alt="Alltiallo Yritys">
-      </div>
+<!-- HEADER -->
+<header>
+  <div class="logo">Alltiallo Oy</div>
 
-      <!-- Hamburgerknapp -->
-      <button class="menu-toggle">☰</button>
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-      <!-- Huvudmeny -->
-      <nav class="main-menu">
-        <ul>
-          <li><a href="#tjanster">Palvelut</a></li>
-          <li><a href="#erbjudanden">Tarjoukset</a></li>
-          <li><a href="#kartta">Sijainti</a></li>
-          <li><a href="#kontakt">Yhteystiedot</a></li>
-        </ul>
-      </nav>
+  <!-- Meny -->
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="#omoss">Meistä</a></li>
+      <li><a href="#tjanster">Palvelut</a></li>
+      <li><a href="#tarjoukset">Tarjoukset</a></li>
+      <li><a href="#kontakt">Yhteystiedot</a></li>
+      <li><a href="#kartta">Sijainti</a></li>
+    </ul>
 
-      <!-- Språkval -->
-      <div class="language-switcher">
-        <a href="?lang=fi"><img src="images/fi.png" alt="FI"></a>
-        <a href="?lang=sv"><img src="images/sv.png" alt="SV"></a>
-        <a href="?lang=en"><img src="images/en.png" alt="EN"></a>
-      </div>
+    <!-- Språkval -->
+    <div class="language-select">
+      <a href="?lang=sv">SV</a> | 
+      <a href="?lang=fi">FI</a> | 
+      <a href="?lang=en">EN</a>
     </div>
-  </header>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="images/hero.jpg" alt="Yritys työssään">
-    <div class="hero-overlay">
-      <h1>Alltiallo Yritys</h1>
-      <p>Remontti, Muutto, Siivous, Puhdistus, Piha- ja asennustyöt</p>
+<!-- OM OSS -->
+<section id="omoss">
+  <h2>Meistä</h2>
+  <p>
+    Alltiallo Oy on luotettava monipalveluyritys Helsingissä. Tarjoamme kattavasti erilaisia palveluita, kuten remontteja, muuttopalveluita, siivousta, saneringia, pihatyötä ja asennuksia.
+  </p>
+  <p>
+    Henkilökuntamme puhuu sujuvasti sekä suomea että ruotsia, ja kaikki työntekijämme käyvät läpi turvallisuustarkastukset asiakkaidemme mielenrauhan varmistamiseksi.
+  </p>
+  <p>
+    Meidän missionamme on ratkaista kaikki ongelmat, jotka voivat ilmetä kotona tai sen ympäristössä – olipa kyseessä pieni huoltotehtävä, iso remontti tai kiireellinen siivous. Teemme arjestasi helpompaa ja turvallisempaa!
+  </p>
+</section>
+
+<!-- TJÄNSTER -->
+<section id="tjanster">
+  <h2>Palvelut</h2>
+  <p>
+    Tarjoamme seuraavat palvelut ammattitaidolla:
+  </p>
+  <div class="service-grid">
+    <div class="service-item">
+      <img src="images/icons/renovointi.png" alt="Remontti">
+      <h3>Remontti</h3>
+      <p>Pienistä korjauksista suuriin projekteihin, kuten kylpyhuone- ja keittiöremontit.</p>
     </div>
-  </section>
-
-  <!-- TJÄNSTER -->
-  <section id="tjanster">
-    <h2>Palvelut</h2>
-    <div class="service-grid">
-      <div class="service-item">
-        <img src="images/icons/renovointi.png" alt="Remontti">
-        <h3>Remontti</h3>
-        <p>Pienistä korjauksista suuriin projekteihin.</p>
-      </div>
-      <div class="service-item">
-        <img src="images/icons/muutto.png" alt="Muutto">
-        <h3>Muutto & Siivous</h3>
-        <p>Nopea ja ammattimainen muuttopalvelu siivouksella.</p>
-      </div>
-      <div class="service-item">
-        <img src="images/icons/siivous.png" alt="Siivous">
-        <h3>Puhdistus</h3>
-        <p>Puhdistus- ja siivouspalvelut kaikenlaisiin tarpeisiin.</p>
-      </div>
-      <div class="service-item">
-        <img src="images/icons/puhdistus.png" alt="Pihatyöt">
-        <h3>Pihatyöt</h3>
-        <p>Puutarha, puiden kaato ja pihan hoito.</p>
-      </div>
-      <div class="service-item">
-        <img src="images/icons/asennus.png" alt="Asennukset">
-        <h3>Asennukset</h3>
-        <p>Kodinkoneiden, huonekalujen ja pienten asennusten tekeminen.</p>
-      </div>
+    <div class="service-item">
+      <img src="images/icons/muutto.png" alt="Muutto">
+      <h3>Muutto</h3>
+      <p>Nopeat ja luotettavat muuttopalvelut kotiin ja toimistoon.</p>
     </div>
-  </section>
-
-  <!-- ERBJUDANDEN -->
-  <section id="erbjudanden">
-    <h2>Tarjoukset</h2>
-    <div class="offer-grid">
-      <div class="offer-card">
-        <h3>10% alennus muuttopalveluista</h3>
-        <p>Vain maaliskuussa! Varaa nyt ja säästä.</p>
-      </div>
-      <div class="offer-card">
-        <h3>Ilmainen tarjous keittiöremontista</h3>
-        <p>Arvioimme projektin ilmaiseksi ja ilman sitoumuksia.</p>
-      </div>
+    <div class="service-item">
+      <img src="images/icons/siivous.png" alt="Siivous">
+      <h3>Siivous</h3>
+      <p>Koti-, yritys- ja muuttosiivous ammattimaisesti ja tehokkaasti.</p>
     </div>
-  </section>
+    <div class="service-item">
+      <img src="images/icons/puhdistus.png" alt="Puhdistus">
+      <h3>Puhdistus ja sanering</h3>
+      <p>Erikoispuhdistus, homepuhdistus ja saneringspalvelut turvallisesti ja nopeasti.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/icons/piha.png" alt="Pihatyöt">
+      <h3>Pihatyöt</h3>
+      <p>Puutarhan hoito, nurmikon leikkuu, puiden kaato ja piharakentaminen.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/icons/asennus.png" alt="Asennukset">
+      <h3>Asennukset</h3>
+      <p>Kodinkoneiden, kalusteiden ja muiden laitteiden asennukset ammattitaidolla.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- GOOGLE MAPS -->
-  <section id="kartta">
-  <h2>Yhteystiedot & Sijainti</h2>
+<!-- ERBJUDANDEN -->
+<section id="tarjoukset">
+  <h2>Erikoistarjoukset</h2>
+  <p>
+    Hyödynnä ajankohtaiset kampanjamme ja säästä rahaa laadukkaista palveluista.
+  </p>
+  <div class="offers-grid">
+    <div class="offer-item">
+      <h3>Muuttotarjous</h3>
+      <p>10% alennus ensimmäisestä muuttopalvelusta!</p>
+    </div>
+    <div class="offer-item">
+      <h3>Siivouskampanja</h3>
+      <p>Kevätsiivous vain 100€ – rajoitettu tarjous!</p>
+    </div>
+  </div>
+</section>
 
+<!-- KONTAKT -->
+<section id="kontakt">
+  <h2>Ota yhteyttä</h2>
+  <p>
+    Olemme helposti tavoitettavissa puhelimitse, sähköpostilla tai täyttämällä alla olevan lomakkeen. Vastaamme nopeasti!
+  </p>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><strong>Puhelin:</strong> 040 123 4567</p>
+      <p><strong>Sähköposti:</strong> info@alltiallo.fi</p>
+      <p><strong>Osoite:</strong> Exempelgatan 1, Helsinki</p>
+    </div>
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Nimi" required>
+        <input type="email" name="email" placeholder="Sähköposti" required>
+        <textarea name="message" placeholder="Viesti" required></textarea>
+        <button type="submit">Lähetä</button>
+        <p class="form-status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAPS -->
+<section id="kartta">
+  <h2>Sijainti</h2>
   <div class="map-container">
     <iframe
       src="https://www.google.com/maps?q=Exempelgatan+1+Helsinki&output=embed"
@@ -104,22 +144,9 @@
       allowfullscreen>
     </iframe>
   </div>
+</section>
 
-  </section>
-
-  <!-- KONTAKT -->
-  <section id="kontakt">
-    <h2>Yhteystiedot</h2>
-    <div class="contact-wrapper">
-      <!-- Formulär -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Nimesi" required>
-        <input type="email" name="email" placeholder="Sähköposti" required>
-        <textarea name="message" placeholder="Viesti" required></textarea>
-        <button type="submit">Lähetä</button>
-        <div class="form-status" id="form-status"></div>
-      </form>
-
-      <!-- Kontaktuppgifter -->
-      <div class="contact-info">
-        <h
+<script src="scripts/menu.js"></script>
+<script src="scripts/contact.js"></script>
+</body>
+</html>
