@@ -1,8 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.main-menu');
+// HAMBURGER FUNKTION
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu').querySelector('ul');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
 });
