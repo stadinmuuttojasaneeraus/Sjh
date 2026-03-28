@@ -23,7 +23,7 @@ header {
   font-weight: bold;
 }
 
-/* NAV MENY */
+/* MENY */
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -31,16 +31,35 @@ header {
   align-items: center;
 }
 
-.nav-menu a {
+.nav-menu a, .accordion-btn {
   color: white;
   text-decoration: none;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
 }
 
+/* Submenu (desktop) */
+.submenu {
+  display: none;
+  position: absolute;
+  background: #004080;
+  margin-top: 5px;
+  padding: 10px;
+  list-style: none;
+}
+
+.accordion-btn:hover + .submenu {
+  display: block;
+}
+
+/* LANGUAGE */
 .language a {
   font-weight: bold;
 }
 
-/* MENU ICON (hamburger) */
+/* MOBIL MENU ICON (hamburger) */
 .menu-icon {
   display: none;
   flex-direction: column;
@@ -117,31 +136,48 @@ h2 { font-size:2rem; margin-bottom:20px; color:#004080; }
 /* MOBILANPASSNING */
 @media (max-width: 768px) {
 
-  /* Hamburger visas */
+  /* Visa hamburger */
   .menu-icon {
     display: flex;
   }
 
   /* Menyn döljs tills öppnas */
   .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -250px; /* utanför skärmen */
-    width: 250px;
-    height: 100%;
+    display: none;
+    flex-direction: column;
     background: #004080;
-    transition: right 0.3s ease;
-    z-index: 2000;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .nav-menu.open {
-    right: 0;
+    display: flex;
   }
 
   .nav-menu ul {
     flex-direction: column;
-    gap: 20px;
-    padding: 60px 20px;
+    gap: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Submenu mobil */
+  .submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+
+  .submenu.open {
+    display: flex;
+  }
+
+  .accordion-btn::after {
+    content: " ▼";
+    float: right;
   }
 }
 @media (max-width:768px) {
