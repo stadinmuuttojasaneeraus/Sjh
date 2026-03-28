@@ -1,338 +1,124 @@
-/* ===== RESET & GRUND ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Grundinställningar */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333; /* mörk text på ljus bakgrund */
-  background-color: #f5f5f5; /* huvudbakgrund */
 }
 
-/* ===== SPRÅKVAL ===== */
-.language-switch {
-  text-align: right;
-  padding: 10px 20px;
-  background-color: #222; /* mörk bakgrund */
-}
-
-.language-switch a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-/* ===== HEADER ===== */
-.site-header {
+.header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #0077cc;
+  color: #fff;
 }
 
-.header-logo img {
-  max-height: 80px; /* ändra till 100px eller mer om det behövs */
+/* Logga */
+.logo img {
+  max-height: 100px;
   width: auto;
 }
-}
 
-.main-nav ul {
-  display: flex;
+/* Meny */
+.main-menu ul {
   list-style: none;
+  display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav a {
+.main-menu a {
+  color: #fff;
   text-decoration: none;
-  color: #333;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
-.main-nav a:hover {
-  color: #0077cc; /* primär blå */
-}
-
+/* Hamburger knapp */
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   background: none;
   border: none;
-  cursor: pointer;
+  color: #fff;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-  background: url('images/hero.jpg') center/cover no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
   position: relative;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4); /* mörk overlay */
-}
-
-.hero-content {
-  position: relative;
-  max-width: 800px;
-  z-index: 1;
-}
-
-.hero-content h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-.btn {
-  padding: 12px 25px;
-  background-color: #0077cc; /* primär blå */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #005fa3; /* mörkare blå vid hover */
-}
-
-/* ===== TJÄNSTER ===== */
-.services {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff; /* ljus sektion */
-}
-
-.services h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.service-card {
-  background: #f5f5f5; /* lätt grått kort */
-  padding: 20px;
-  width: 280px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.service-card img {
-  width: 80px;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-  color: #0077cc;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* ===== ERBJUDANDEN ===== */
-.offers {
-  padding: 60px 20px;
-  background-color: #eaeaea; /* mellangrå sektion */
-  text-align: center;
-}
-
-.offers h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-.offers-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.offer-card {
-  background: #fff;
-  padding: 10px;
-  width: 300px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.offer-card img {
+.hero img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  height: 400px;
+  object-fit: cover;
 }
 
-/* ===== PRISER ===== */
-.pricing {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.pricing h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-.pricing-grid {
-  display: flex;
-  flex-wrap: wrap;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
 }
 
-.price-card {
-  background: #f5f5f5;
-  padding: 20px;
-  width: 250px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* Google Maps */
+#map {
+  width: 100%;
+  height: 400px;
 }
 
-/* ===== KONTAKT ===== */
-.contact {
-  padding: 60px 20px;
-  background-color: #eaeaea;
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-.contact-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-form {
-  flex: 1 1 300px;
+/* Kontaktformulär */
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 500px;
+  margin: auto;
 }
 
-.contact-form input,
-.contact-form textarea {
+input, textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-size: 16px;
   width: 100%;
 }
 
-.contact-form button {
-  padding: 12px;
+button {
+  padding: 10px;
   background-color: #0077cc;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  font-size: 18px;
   cursor: pointer;
-  font-weight: bold;
 }
 
-.contact-form button:hover {
-  background-color: #005fa3;
-}
-
-.contact-map {
-  flex: 1 1 300px;
-  min-height: 300px;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.site-footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-/* ===== RESPONSIV DESIGN ===== */
-@media (max-width: 1024px) {
-  .services-grid, .offers-grid, .pricing-grid {
-    justify-content: center;
-  }
-}
-
+/* Mobilanpassning */
 @media (max-width: 768px) {
-  .services-grid, .offers-grid, .pricing-grid, .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    height: 250px;
-  }
-  .hero-content h1 {
-    font-size: 24px;
-  }
-  .hero-content p {
-    font-size: 14px;
-  }
-  .main-nav ul {
+  .main-menu {
     display: none;
     flex-direction: column;
-    gap: 10px;
-    background: #fff;
-    padding: 10px;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    background-color: #0077cc;
   }
-  .main-nav ul.active {
+
+  .main-menu.active {
     display: flex;
   }
+
   .menu-toggle {
     display: block;
   }
-    }
+
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .hero img {
+    height: 250px;
+  }
+}
