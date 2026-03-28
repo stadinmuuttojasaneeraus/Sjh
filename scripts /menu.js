@@ -1,6 +1,6 @@
-const hamburger = document.getElementById("hamburger");
-const navList = document.getElementById("nav-list");
+const menuIcon = document.getElementById("menu-icon");
+const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener("click", () => {
-  navList.classList.toggle("active");
+menuIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
 });
