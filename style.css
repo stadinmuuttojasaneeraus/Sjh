@@ -3,7 +3,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
+.form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
